@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MT-Haas</title>
+{% if plant_list %}
+    <ul>
+    {% for p in plant_list %}
+        <li><a href="/haas/plants/{{ p.id }}/">{{ p.name }} {{ p.humidity }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No plants are available.</p>
+{% endif %}
+<!--
+</head>
+<body>
+
+</body>
+</html>
+-->
